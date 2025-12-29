@@ -1,39 +1,7 @@
 "use client";
-import { useState, useEffect } from 'react';
 
-export default function QuestionCard({ question, onAnswer, teamName }) {
-    // question object: { category, type, difficulty, question, correct_answer, incorrect_answers }
-    const [shuffledAnswers, setShuffledAnswers] = useState([]);
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
-    const [revealed, setRevealed] = useState(false);
-
-    useEffect(() => {
-        if (question) {
-            const answers = [...question.incorrect_answers, question.correct_answer];
-            // Simple shuffle
-            for (let i = answers.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [answers[i], answers[j]] = [answers[j], answers[i]];
-            }
-            setShuffledAnswers(answers);
-            setSelectedAnswer(null);
-            setRevealed(false);
-        }
-    }, [question]);
-
-    const handleChoice = (answer) => {
-        if (revealed) return;
-        setSelectedAnswer(answer);
-    };
-
-    const handleSubmit = () => {
-        if (!selectedAnswer) return;
-        setRevealed(true);
-        const isCorrect = selectedAnswer === question.correct_answer;
-        setTimeout(() => onAnswer(isCorrect), 2000);
-    };
-
-    // Decode HTML entities (quick fix utility)
+export default function QuestionCard({ question, index, currentValue, isLocked, onUpdate, onLock }) {
+    // Decode HTML entities
     const decodeHTML = (html) => {
         const txt = document.createElement('textarea');
         txt.innerHTML = html;
@@ -42,94 +10,68 @@ export default function QuestionCard({ question, onAnswer, teamName }) {
 
     if (!question) return <div>Loading...</div>;
 
+    const category = decodeHTML(question.category);
+    const text = decodeHTML(question.question);
+
     return (
-        <div className="glass-panel" style={{ padding: '3rem', width: '100%', maxWidth: '700px', position: 'relative' }}>
+        <div className="glass-panel" style={{ padding: '2rem', position: 'relative' }}>
             <div style={{
                 position: 'absolute',
-                top: '-15px',
-                left: '50%',
-                transform: 'translateX(-50%)',
+                top: '-10px',
+                left: '20px',
                 background: 'hsl(var(--color-accent-purple))',
-                padding: '0.25rem 1rem',
-                borderRadius: '20px',
-                fontSize: '0.8rem',
+                padding: '0.2rem 0.8rem',
+                borderRadius: '15px',
+                fontSize: '0.7rem',
                 fontWeight: 'bold',
                 textTransform: 'uppercase',
                 letterSpacing: '1px'
             }}>
-                {decodeHTML(question.category)}
+                Q{index + 1}: {category}
             </div>
 
-            <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-                <p style={{ color: 'hsl(var(--color-text-secondary))', marginBottom: '0.5rem' }}>
-                    Question for <span style={{ color: 'white', fontWeight: 'bold' }}>{teamName}</span>
-                </p>
-                <h3 style={{ fontSize: '1.5rem', lineHeight: 1.4 }}>{decodeHTML(question.question)}</h3>
-            </div>
+            <h3 style={{ fontSize: '1.2rem', marginTop: '1rem', marginBottom: '1.5rem', lineHeight: 1.4 }}>
+                {text}
+            </h3>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                {shuffledAnswers.map((answer, index) => {
-                    let style = {
-                        padding: '1.5rem',
-                        background: 'hsla(var(--color-bg-secondary), 0.5)',
-                        border: '2px solid transparent',
-                        borderRadius: '12px',
-                        color: 'var(--color-text-primary)',
+            <div style={{ display: 'flex', gap: '1rem' }}>
+                <input
+                    type="text"
+                    value={currentValue}
+                    onChange={(e) => onUpdate(e.target.value)}
+                    disabled={isLocked}
+                    placeholder={isLocked ? "Answer Locked" : "Type answer here..."}
+                    style={{
+                        flex: 1,
+                        padding: '1rem',
+                        borderRadius: '8px',
+                        border: isLocked ? '2px solid #2ecc71' : '1px solid var(--glass-border)',
+                        background: isLocked ? 'rgba(46, 204, 113, 0.1)' : 'rgba(0,0,0,0.3)',
+                        color: 'white',
                         fontSize: '1rem',
-                        textAlign: 'center',
-                        transition: 'all 0.2s ease',
-                        cursor: 'pointer'
-                    };
+                        outline: 'none'
+                    }}
+                />
 
-                    if (revealed) {
-                        if (answer === question.correct_answer) {
-                            style.background = 'hsla(120, 100%, 30%, 0.5)';
-                            style.border = '2px solid #2ecc71';
-                        } else if (answer === selectedAnswer) {
-                            style.background = 'hsla(0, 100%, 50%, 0.3)';
-                            style.border = '2px solid #e74c3c';
-                        } else {
-                            style.opacity = 0.5;
-                        }
-                    } else if (selectedAnswer === answer) {
-                        style.background = 'hsla(var(--color-accent-blue), 0.2)';
-                        style.border = '2px solid hsl(var(--color-accent-blue))';
-                    }
-
-                    return (
-                        <button
-                            key={index}
-                            onClick={() => handleChoice(answer)}
-                            style={style}
-                            disabled={revealed}
-                        >
-                            {decodeHTML(answer)}
-                        </button>
-                    );
-                })}
+                <button
+                    onClick={onLock}
+                    disabled={isLocked || !currentValue.trim()}
+                    style={{
+                        padding: '0 1.5rem',
+                        borderRadius: '8px',
+                        background: isLocked
+                            ? '#2ecc71'
+                            : (currentValue.trim() ? 'hsl(var(--color-accent-pink))' : 'rgba(255,255,255,0.1)'),
+                        color: 'white',
+                        border: 'none',
+                        cursor: (isLocked || !currentValue.trim()) ? 'default' : 'pointer',
+                        fontWeight: 'bold',
+                        transition: 'all 0.2s'
+                    }}
+                >
+                    {isLocked ? "LOCKED" : "LOCK"}
+                </button>
             </div>
-
-            {!revealed && (
-                <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
-                    <button
-                        onClick={handleSubmit}
-                        disabled={!selectedAnswer}
-                        style={{
-                            padding: '1rem 3rem',
-                            background: selectedAnswer ? 'hsl(var(--color-accent-pink))' : 'hsl(var(--color-bg-secondary))',
-                            color: selectedAnswer ? 'white' : 'hsl(var(--color-text-secondary))',
-                            borderRadius: '50px',
-                            fontWeight: 800,
-                            fontSize: '1.1rem',
-                            opacity: selectedAnswer ? 1 : 0.5,
-                            cursor: selectedAnswer ? 'pointer' : 'not-allowed',
-                            boxShadow: selectedAnswer ? '0 0 20px hsla(var(--color-accent-pink), 0.5)' : 'none'
-                        }}
-                    >
-                        Lock Answer
-                    </button>
-                </div>
-            )}
         </div>
     );
 }
