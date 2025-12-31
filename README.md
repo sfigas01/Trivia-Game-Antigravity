@@ -18,9 +18,11 @@ Players can request niche custom themes (e.g., "1990s Toronto Raves" or "Organic
 ## 🎮 Game Modes
 
 ### 1. Team Mode (The Social Default)
-*   **Mechanic: "The Polite Interrogation"**
-*   **Rule:** No passing allowed. Teams *must* answer, even if they have to invent a creative lie. Opposing teams can steal points by calling "Bullsh*t".
-*   **Best For:** Party play and social friction.
+*   **Mechanic: "Risk or Regret" (Inspired by "I Should Have Known That")**
+*   **The Hook:** It's not about what you know; it's about avoiding what you *don't* know.
+*   **Scoring:** Start at 0. Wrong answers cost points. Correct answers get you nothing (you *should* have known that).
+*   **Strateg:** You can "Pass" for 0 points (The Coward's Way Out), but the team closest to 0 wins.
+*   **Best For:** High stakes party play.
 
 ### 2. Classic Mode
 *   **Mechanic:** Standard Pub Quiz.

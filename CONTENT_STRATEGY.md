@@ -43,19 +43,23 @@ To serve the broader 18-50 demographic and the "Not US-Centric" promise, we use 
 The content adapts to the Product Strategy's core modes:
 
 ### Mode 1: Team Mode (The Social Default)
-*   **Mechanic: "The Polite Interrogation"**
-    *   **No Pass Rule:** Teams *must* answer. "I don't know" is not an option; creative lying is encouraged.
-    *   **The Steal:** Opposing teams can challenge a suspected lie for points.
-    *   *Best for:* Pillars A, C, and D.
+*   **Mechanic: "Risk or Regret" (Inspired by "I Should Have Known That")**
+    *   **The Hook:** It's not about what you know; it's about avoiding what you *don't* know.
+    *   **Scoring:**
+        *   **Correct Answer:** 0 Points (You *should* have known that).
+        *   **Pass:** 0 Points (The Coward's Way Out).
+        *   **Incorrect Answer:** **Negative Points** (-1 to -5 based on difficulty).
+    *   **The Twist:** You start with 0. The goal is to stay at 0. The winner is the team with the *score closest to zero* (i.e., the fewest penalties).
+    *   *Best for:* All Pillars (High stakes, high stress, high fun).
 
 ### Mode 2: Classic Mode
 *   **Mechanic: "Standard Pub Quiz"**
-    *   Simple Q&A format.
-    *   *Best for:* Pillar B (Global Knowledge) and general play.
+    *   Simple Q&A format. Traditional scoring (+1 for correct).
+    *   *Best for:* Pillar B (Global Knowledge) and casual practice.
 
 ### Mode 3: Blitz Mode
 *   **Mechanic: "Rapid Fire"**
-    *   Timed answers. No time for debate.
+    *   Timed answers. No passes allowed.
     *   *Best for:* High-volume "Fresh Prints" or simple recall facts.
 
 ---
