@@ -17,20 +17,14 @@ Players can request niche custom themes (e.g., "1990s Toronto Raves" or "Organic
 
 ## 🎮 Game Modes
 
-### 1. Team Mode (The Social Default)
-*   **Mechanic: "Risk or Regret" (Inspired by "I Should Have Known That")**
-*   **The Hook:** It's not about what you know; it's about avoiding what you *don't* know.
-*   **Scoring:** Start at 0. Wrong answers cost points. Correct answers get you nothing (you *should* have known that).
-*   **Strateg:** You can "Pass" for 0 points (The Coward's Way Out), but the team closest to 0 wins.
-*   **Best For:** High stakes party play.
-
-### 2. Classic Mode
-*   **Mechanic:** Standard Pub Quiz.
-*   **Best For:** General Knowledge and "Global, Eh?" content.
-
-### 3. Blitz Mode
-*   **Mechanic:** Rapid-fire, timed rounds.
-*   **Best For:** High-volume current events and viral trends.
+### 1. The True North Challenge (Core Game)
+*   **Mechanic: "High Stakes Trivia"**
+*   **The Hook:** Knowledge is power, but ignorance is expensive.
+*   **Scoring:**
+    *   **Correct:** +Points (Difficulty based. Harder = More Points).
+    *   **Incorrect:** -Points (Risk penalty).
+*   **Rule:** **No Passing.** You must answer.
+*   **Winning:** The team with the **most points** wins.
 
 ## 🧠 The Content Mix
 

@@ -42,25 +42,15 @@ To serve the broader 18-50 demographic and the "Not US-Centric" promise, we use 
 
 The content adapts to the Product Strategy's core modes:
 
-### Mode 1: Team Mode (The Social Default)
-*   **Mechanic: "Risk or Regret" (Inspired by "I Should Have Known That")**
-    *   **The Hook:** It's not about what you know; it's about avoiding what you *don't* know.
+### Mode: The True North Challenge (Core Game)
+*   **Mechanic: "High Stakes Trivia"**
+    *   **The Hook:** Knowledge is power, but ignorance is expensive.
     *   **Scoring:**
-        *   **Correct Answer:** 0 Points (You *should* have known that).
-        *   **Pass:** 0 Points (The Coward's Way Out).
-        *   **Incorrect Answer:** **Negative Points** (-1 to -5 based on difficulty).
-    *   **The Twist:** You start with 0. The goal is to stay at 0. The winner is the team with the *score closest to zero* (i.e., the fewest penalties).
-    *   *Best for:* All Pillars (High stakes, high stress, high fun).
-
-### Mode 2: Classic Mode
-*   **Mechanic: "Standard Pub Quiz"**
-    *   Simple Q&A format. Traditional scoring (+1 for correct).
-    *   *Best for:* Pillar B (Global Knowledge) and casual practice.
-
-### Mode 3: Blitz Mode
-*   **Mechanic: "Rapid Fire"**
-    *   Timed answers. No passes allowed.
-    *   *Best for:* High-volume "Fresh Prints" or simple recall facts.
+        *   **Correct Answer:** **+Points** (Based on difficulty context. E.g., Obvious = +1, Deep Cut = +3).
+        *   **Incorrect Answer:** **-Points** (Getting it wrong costs you. E.g., -2).
+        *   **Forced Answer:** Teams *cannot* pass. They must guess.
+    *   **Winning:** The team with the **most points** at the end wins.
+    *   **Why it works:** It forces engagement. Since you *can't* pass, you have to risk the penalty, but the potential for high points on "Deep Cuts" encourages players to show off.
 
 ---
 
