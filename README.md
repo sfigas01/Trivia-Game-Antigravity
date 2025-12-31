@@ -23,7 +23,8 @@ Players can request niche custom themes (e.g., "1990s Toronto Raves" or "Organic
 *   **Scoring:**
     *   **Correct:** +Points (Difficulty based. Harder = More Points).
     *   **Incorrect:** -Points (Risk penalty).
-*   **Rule:** **No Passing.** You must answer.
+    *   **Pass:** 0 Points (Safety).
+*   **Rule:** **Risk it or safe it.**
 *   **Winning:** The team with the **most points** wins.
 
 ## 🧠 The Content Mix

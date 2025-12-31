@@ -44,13 +44,13 @@ The content adapts to the Product Strategy's core modes:
 
 ### Mode: The True North Challenge (Core Game)
 *   **Mechanic: "High Stakes Trivia"**
-    *   **The Hook:** Knowledge is power, but ignorance is expensive.
+    *   **The Hook:** Knowledge is power, but ignorance is expensive. Do you risk it?
     *   **Scoring:**
         *   **Correct Answer:** **+Points** (Based on difficulty context. E.g., Obvious = +1, Deep Cut = +3).
+        *   **Pass:** **0 Points** (Safety first).
         *   **Incorrect Answer:** **-Points** (Getting it wrong costs you. E.g., -2).
-        *   **Forced Answer:** Teams *cannot* pass. They must guess.
     *   **Winning:** The team with the **most points** at the end wins.
-    *   **Why it works:** It forces engagement. Since you *can't* pass, you have to risk the penalty, but the potential for high points on "Deep Cuts" encourages players to show off.
+    *   **Why it works:** It creates a gambling dynamic. If you're 80% sure, do you risk the -2 for the +3? Or do you take the 0?
 
 ---
 
